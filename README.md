@@ -47,6 +47,10 @@ An example of the a graph can be seen below:
 
 For instance, from the above graph we can see the relationship between the Rouge 1 Score and the amount of sentence present in the original text. The graph shows that the highest Rouge-1 scores are for those texts that have less sentences. We can also notice that the SummaReranker perfoms better than the baseline as the sentence count increases. 
 
+<img src="https://github.com/tashamina/statistical_tests_summaReranker/blob/main/visualization/readability.png" width="700" height="500">
+
+The above graph shows the median score for Rouge 1 score against the Flesch Readability Ease score. We can see that overall the summaReranker is able to achieve higher scores. And it could be seen that as the text becomes easier to read, the scores all become higher. It is interesting to note though how around 90 Flesch Readabilty Ease score the Rouge score suddenly drops, but then it goes back up for the SummaReranker but stays low for the baseline.
+
 ### Experimental Settings
 
 Null Hypothesis: The expected Rouge scores are equal for both systems, there is no statistically significant difference between the two systems.  

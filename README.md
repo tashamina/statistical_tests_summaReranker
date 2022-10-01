@@ -76,7 +76,7 @@ Pairwise Comparison
 
 ## Discussion 
 
-Based the p-value that were calculated, the null hypothesis can be rejected and we can see that the difference betweeen the baseline results and those of the SummaReranker are statistically significant.
+Based on the p-value that were calculated, the null hypothesis can be rejected and we can see that the difference betweeen the baseline results and those of the SummaReranker are statistically significant.
 
 ## References 
 

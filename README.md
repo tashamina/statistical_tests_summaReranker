@@ -6,17 +6,13 @@ The following project focused on analysing the Rouge scores that were obtained b
  
  ## SummaReranker
  
- Follow the steps from [here](https://github.com/Ravoxsg/SummaReranker-ACL-22-) in order to obtain the results that are needed for this project's evaluation. To perform this experiment you will need: baseline and SummaReranker generated summaries, the scores obtained for each summary, the original texts and the test labels.  The required files can be also found in the data folder of this repo.
- 
-```
-statistical_tests_summaReranker/data
-```
+Follow the steps as presented in this [repository](https://github.com/Ravoxsg/SummaReranker-ACL-22-) in order to obtain the results that are needed for this project's evaluation. To perform this experiment you will need: baseline and SummaReranker generated summaries, the scores obtained for each summary, the original texts and the test labels.  The required files can be also found in the data folder of this repo: `statistical_tests_summaReranker/data`
 
 Once all the evaluation data is generated [pymer4](https://eshinjolly.com/pymer4/) can be installed. Pymer4 is a library that allows you to use linear mixed effects model in a python setting. The installation page provides instruction on how to install the library and the library. However, during the installation problems might arise. You can follow the steps bellow to ensure the successful installation on linux.
 
 ## Installation steps for Linux
 
-Firstly, install [Anaconda](https://www.anaconda.com/products/distribution). It is recommended to install Miniconda because it is lighter and installs fewer unnecessary packages.
+Firstly, install [Anaconda](https://www.anaconda.com/products/distribution). It is recomended to install Miniconda as it contains all the necessary packages that are needed and doens't include other unnecessary packages that are included in Anaconda. 
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash ./Miniconda3-latest-Linux-x86_64.sh
@@ -35,11 +31,7 @@ This enviroment will allow you to import the LMEMs and performed the desired tes
 
 ### Visualization of the evaluation data
 
-```
-statistical_tests_summaReranker/evaluation_analysis.ipynb
-```
-
-The above notebook contains all the experiments of this project. With the help of the notebook you can visualize how the scores correlate to different variables, like the Flesch reading ease score, word difficulty, word number and sentence lenght. 
+The notebook: `statistical_tests_summaReranker/evaluation_analysis.ipynb` contains all the experiments of this project. With the help of the notebook you can visualize how the scores correlate to different variables, like the Flesch reading ease score, word difficulty, word number and sentence lenght. 
 An example of the a graph can be seen below:
 
 
@@ -54,7 +46,7 @@ The above graph shows the median score for Rouge 1 score against the Flesch Read
 ### Experimental Settings
 
 Null Hypothesis: The expected Rouge scores are equal for both systems, there is no statistically significant difference between the two systems.  
-ALternative Hypothesis: The expected Rouge scores are not equal for both systems. And one system performs better then that other one. 
+Alternative Hypothesis: The expected Rouge scores are not equal for both systems. And one system performs better then that other one. 
 
 - Finetuned Pegasus Baseline vs SummaReranker
 - Pegasus Base model (no fine-tuning) vs SummaReranker

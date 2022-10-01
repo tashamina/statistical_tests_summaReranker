@@ -16,7 +16,7 @@ Once all the evaluation data is generated [pymer4](https://eshinjolly.com/pymer4
 
 ## Installation steps for Linux
 
-Firstly, install [Anaconda](https://www.anaconda.com/products/distribution). It is recommended to install Miniconda because it is lighter and install fewer unnecessary packages.
+Firstly, install [Anaconda](https://www.anaconda.com/products/distribution). It is recommended to install Miniconda because it is lighter and installs fewer unnecessary packages.
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash ./Miniconda3-latest-Linux-x86_64.sh
@@ -57,7 +57,6 @@ Null Hypothesis: The expected Rouge scores are equal for both systems, there is 
 ALternative Hypothesis: The expected Rouge scores are not equal for both systems. And one system performs better then that other one. 
 
 - Finetuned Pegasus Baseline vs SummaReranker
-- Best Finetuned Pegasus Baseline vs SummaReranker
 - Pegasus Base model (no fine-tuning) vs SummaReranker
 
 2 LMEMs were fitted on the data:
@@ -73,23 +72,19 @@ GLRT results:
 
 | Models  | P-value |
 | ------------- | ------------- |
-| Finetuned Pegasus Baseline vs SummaReranker  | 0.37084  |
-| Best Finetuned Pegasus Baseline vs SummaReranker  | 0.00078 |
-| Pegasus Base model (no fine-tuning) vs SummaReranker | 0.11189 |
+| Finetuned Pegasus Baseline vs SummaReranker  | 5.830698124320577e-07  |
+| Pegasus Base model (no fine-tuning) vs SummaReranker | 1.999688226117513e-08 |
 
 Pairwise Comparison
 
 | Contrast |	Estimate |	2.5_ci |	97.5_ci |	SE |	DF |	T-stat |	P-val |	Sig|
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |------------- |
-| Finetuned Pegasus Baseline - SummaReranker  | 0.04 |	-0.077 | 	0.156 | 	0.042 |	4.0 |	0.942 |	0.4 | 	
-| Best Finetuned Pegasus Baseline - SummaReranker  | 0.145 |	0.095 |	0.196 |	0.018 |	4.0 |	7.942 |	0.001 |	**|
-| Pegasus Base model (no fine-tuning) - SummaReranker | -0.093 | -0.23 |	0.044 |	0.049 |	4.0 |	-1.877 |	0.134 | 	 |
+| Finetuned Pegasus Baseline - SummaReranker  | 0.031 |	0.02 |	0.041 |	0.005 |	42.0 |	5.84 |	0.0 	| ***|
+| Pegasus Base model (no fine-tuning) - SummaReranker | 0.121 |	0.085 |	0.156 |	0.018 |	42.0 |	6.849 |	0.0 |	***|
 
+## Discussion 
 
-From the above results we cannot reject the null hypothesis for two settings: Finetuned Pegasus Baseline vs SummaReranker and Pegasus Base model (no fine-tuning) vs SummaReranker. Since the p-value is not less than 0.05 we cannot reject the null hypothesis, it can be then deduced that the difference between two systems is not statistically significant. 
-On the other hand, when picking the best candidates from the baseline model, we can see that the baseline actually performs better than SummaReranker in term of Rouge 1 scores. This,  however, does not mean that the SummaReranker picks worse summary candidates because a high Rouge score does not neccessary mean the best summary. The search for a better evaluation metric for text summarization is still an active research area.  
-
-
+Based the p-value that were calculated, the null hypothesis can be rejected and we can see that the difference betweeen the baseline results and those of the SummaReranker are statistically significant.
 
 ## References 
 

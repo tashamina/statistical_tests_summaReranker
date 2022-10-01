@@ -6,7 +6,7 @@ The following project focused on analysing the Rouge scores that were obtained b
  
  ## SummaReranker
  
- Follow the steps from here in order to obtain the results that are needed for this project's evaluation. To perform this experiment you will need: baseline and SummaReranker generated summaries, the scores obtained for each summary, the original texts and the test labels.  The required files can be also found in the data folder of this repo.
+ Follow the steps from [here](https://github.com/Ravoxsg/SummaReranker-ACL-22-) in order to obtain the results that are needed for this project's evaluation. To perform this experiment you will need: baseline and SummaReranker generated summaries, the scores obtained for each summary, the original texts and the test labels.  The required files can be also found in the data folder of this repo.
  
 ```
 statistical_tests_summaReranker/data

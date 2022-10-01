@@ -14,7 +14,7 @@ statistical_tests_summaReranker/data
 
 Once all the evaluation data is generated [pymer4](https://eshinjolly.com/pymer4/) can be installed. Pymer4 is a library that allows you to use linear mixed effects model in a python setting. The installation page provides instruction on how to install the library and the library. However, during the installation problems might arise. You can follow the steps bellow to ensure the successful installation on linux.
 
-##Installation steps for Linux
+## Installation steps for Linux
 
 Firstly, install [Anaconda](https://www.anaconda.com/products/distribution). It is recommended to install Miniconda because it is lighter and install fewer unnecessary packages.
 ```
